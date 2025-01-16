@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Attractions</title>
+    <style>
+    body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #a79c9a;
+}
+
+header {
+    background-color: rgba(100, 97, 91, 0.7);
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; 
+    padding: 0 100px; 
+}
+
+header h1 {
+    font-size: 55px; 
+    font-weight: 700;
+    color: #d4a06d; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin: 0;
+    margin-right: 30px; 
+}
+
+nav {
+    font-size: 17px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px; 
+    font-weight: 250px;
+}
+
+nav a:hover {
+    color: #bd9f82;
+}
+
+.container {
+    padding: 20px;
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr)); 
+    gap: 20px; 
+}
+
+.attraction {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    border: 4px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px; 
+}
+.change-color-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+.change-color-btn :hover{
+
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.change-color-btn :active{
+
+    transform: scale(0.95); 
+}
+
+.attraction img {
+    width: 100%; 
+    height: 400px; 
+    object-fit: cover; 
+}
+
+.attraction-info {
+    text-align: center; 
+    padding: 10px;
+}
+
+.attraction-info h3 {
+    margin: 0 0 10px;
+}
+
+.attraction-info p {
+    margin: 0;
+    color: #555;
+}
+
+footer {
+    background-color: rgba(81, 78, 70, 0.7);
+    color: white;
+    text-align: center;
+    padding: 1px 0;
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Attractions</h1>
+        <nav>
+            <a href="page three.html">Travel Guides</a>
+        </nav>
+    </header>
+
+
+    <script>
+        function changeColors() {
+          
+          document.body.style.backgroundColor = getRandomColor();
+          document.body.style.color = getRandomColor();
+          document.getElementsByTagName('p').style.color = getRandomColor();
+          
+        }
+    
+        function getRandomColor() {
+          return '#' + Math.floor(Math.random() * 16777215).toString(16);
+        }
+      </script>
+    
+    <div class="container">
+        <div class="attraction">
+            <img src="pic 2.jpg" alt="Attraction 1">
+            <div class="attraction-info">
+                <h2><strong>Falak-ol Aflak Castle</strong></h2>
+                <p id="hi">Shapur Khast Castle, commonly known as Falak-ol-Aflak Castle, is a breathtaking historical fortress located in Khorramabad, the heart of Lorestan Province, Iran.<br />
+                 Dating back to the Sassanid era, around the 3rd century AD, this castle is perched atop a hill, offering a panoramic view of Khorramabad and its surrounding landscapes.<br />
+                 The fortress, constructed primarily of brick and stone, is a remarkable example of ancient Iranian architecture.<br />
+                 It's distinguished by its imposing structure, consisting of eight towers and sprawling courtyards, which exemplify the military and architectural prowess of the Sassanid era.</p>
+            </div>
+        </div>
+        <div class="attraction">
+            <img src="pic 3.jpg" alt="Attraction 2">
+            <div class="attraction-info">
+                <h2><strong>Keeyow Lake</strong></h2>
+                <p>This lake has a seven-hectare area and a depth of 3 to 7 meters. There is an amusement park as well as other recreational facilities next to the lake.<br />
+                    It is the only natural city lake in Iran and is a habitat for native and migratory birds and aquatic animals.</p>
+            </div>
+        </div>
+        
+        <div class="attraction">
+            <img src="pic 4.jpg" alt="Attraction 3">
+            <div class="attraction-info">
+                <h2><strong>Shapouri Bridge</strong></h2>
+                <p>Shapuri Bridge or Broken Bridge is located 2 km. south-west of Khoram Abad in Lorestan Province, and to the west of the old city of Shahpour Khast.<br />
+                It is one of the master-pieces of architecture in bridge construction of the Sassanian period.The arches of the said bridge has been constructed of stone, whereas the bridge itself is a mixture of stone and mortar.<br>
+                The Broken Bridge is considered as one of the largest stone bridges in Iran.
+                 </p>
+            </div>
+        </div>
+        <div class="attraction">
+            <img src="pic 5.jpg" alt="Attraction 4">
+            <div class="attraction-info">
+                <h2><strong>Sangi Whirlpool</strong></h2>
+                <p>Historical stony whirlpool from the Sassanid era located in Takhti Square of Khorramabad in Lorestan province, Iran.<br />
+                 This building with a diameter of 18 meters and width of 3 meters and a height of 12m of well floor has surrounded around the seasonal well. Well that Sangi Whirlpool(or Gerdab-e-Sangi) is fed by it has water from mid-winter to mid-summer and at other times is dry.
+                 </p>
+         </div>
+    </div>
+    <div class="attraction">
+        <img src="pic 6.jpg" alt="Attraction 5">
+        <div class="attraction-info">
+            <h2><strong>Darreh-khazineh Canyon</strong></h2>
+            <p>Khazineh Valley is a breathtaking natural wonder that captures the essence of the region's rugged beauty. Known for its dramatic landscapes, the valley is characterized by towering cliffs, a meandering river, and a diverse range of flora and fauna.<br />
+                 It is a place where nature's artistry is displayed in full splendor, making it a must-see destination for nature lovers, adventurers, and photographers alike.<br />
+                 The valley's most iconic feature is the Khazineh Bridge, an engineering marvel that spans the gorge, offering awe-inspiring views of the surrounding landscape.
+             </p>
+     </div>
+     </div>
+     <div class="attraction">
+        <img src="pic 7.jpg" alt="Attraction 6">
+        <div class="attraction-info">
+            <h2><strong>kaldar Cave</strong></h2>
+            <p>Kaldar Cave located near Khorramabad city in the western Iranian province of Lorestan. During the exploration of the Kaldar cave in Khorramabad valley by the Sefidkuh Mountain,<br />
+              archaeologists discovered valuable remains of appeared to be the belongings of early of hunting and gathering humans of the middle and upper Paleolithic age onwards.<br />
+              The discoveries were made in a Paleolithic stratum, with some geological strata having remained intact since the Pleistocene era, which lasted from 1.7 million years ago to about 10,000 years ago.
+             </p>
+         </div>
+      </div>
+      <div class="attraction">
+        <img src="pic 8.jpg" alt="Attraction 7">
+        <div class="attraction-info">
+            <h2><strong>Makhmal Kuh</strong></h2>
+            <p>Makhmal Kuh, literary meaning velvet mountain, is an eye-catching and popular mount that dominates Khorramabad, the capital of Lorestan province, western Iran.<br />
+             This beautiful area is located to the north of Khoram Abad, in the valley of Makhmal Kuhh. It is so called due to abundance of small stones and flowers in the way to the same and measuring 2900 meters at its highest point.
+             </p>
+         </div>
+      </div>
+      <div class="attraction">
+        <img src="pic 9.jpg" alt="Attraction 8">
+        <div class="attraction-info">
+            <h2><strong>Brick Minaret</strong></h2>
+            <p>Brick Minaret is a historical minaret in Khorramabad, Iran. This Minaret is close to the Falak-ol-Aflak Castle and was built to help caravans find their ways through dark nights.<br />
+             To facilitate this, a fire was lighted on top of the minaret, which was visible from long distances.Brick Minaret is now located in the south of Khorramabad, and it is registered on the list of National Monuments.
+         </div>
+      </div> 
+      <div class="attraction">
+        <img src="pic 10.jpg" alt="Attraction 9">
+        <div class="attraction-info">
+            <h2><strong>6th Century Inscription</strong></h2>
+            <p>The Stone Inscription(known as Sang Neveshteh)of Khorramabad is a historical inscription.It is an ancient carved stone stele that dates back to the time of the Sassanid Empire (224-651 CE).The inscription is written in Middle Persian and provides details about local governance,<br />
+                taxation, or decrees issued by the ruling authority of the time.
+                This inscription is notable for its cultural and historical significance, as it sheds light on the administrative and societal structure of the region during the Sassanid era.</p>
+         </div>
+      </div>  
+    </div>
+    <div><button class="change-color-btn" onclick="changeColors()">Change Colors</button></div> 
+    <footer>
+    
+        <p>&copy; 2025 Khorramabad Tourism. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

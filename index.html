@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khorramabad city</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            margin: 0;
+            line-height:1.5;
+            padding: 25px;
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background: #272727;
+            filter: invert(1) hue-rotate(210deg);
+        }
+
+        .background-container {
+            background-image: url('pic 1.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .background-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); 
+            z-index: 0;
+        }
+
+        
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            color: white;
+        }
+
+       
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(100, 97, 91, 0.7); 
+        }
+
+        header h1 {
+            font-size: 41px; 
+            font-weight: 700;
+            color: #d4a06d; 
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links ul li {
+            margin-left: 15px;
+        }
+
+        .nav-links ul li:last-child {
+            margin-right: 20px;
+        }
+
+        .nav-links ul li a {
+            text-decoration: none;
+            color: #f1f1f1; 
+            font-weight: 500;
+            font-size: 15px; 
+            transition: color 0.3s;
+        }
+
+        .nav-links ul li a:hover {
+            color: #91775e; 
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px; 
+        }
+        .button {
+            padding: 20px 20px;
+            font-size: 30px;
+            border: none;
+            border-radius: 0 5px 5px 0 ;
+            cursor: pointer;
+            margin: auto;
+            transition: background-color 0.3s;
+        }
+        
+
+        
+        main {
+            text-align: center;
+            margin: auto 0;
+        }
+
+        main h2 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #d4a06d; 
+            text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        main p {
+            font-size: 20px;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: #eaeaea; 
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .search-box {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-box input[type="text"],
+        .search-box input[type="search"] {
+            padding: 9px 15px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            width: 250px;
+        }
+
+        .search-box button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #d4a06d;
+            color: white;
+            border-radius: 0 5px 5px 0 ;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: #c17a4a;
+        }
+
+        footer {
+            background-color: rgba(81, 78, 70, 0.7);
+            color: white;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <div class="content">
+            <header>
+                <h1>Khorramabad Tourism City</h1>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="page one.html">Attractions</a></li>
+                        <li><a href="page three.html">Travel Guides</a></li>
+                        <li><a href="page two.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </header>
+            <main>
+                <h2><b>Discover Khorramabad!</b></h2>
+                <p class="light">Khorramabad, the capital of Lorestan Province, is known for its rich cultural heritage and stunning natural landscapes.<br/> 
+                    The city is surrounded by beautiful mountains and features a wealth of historical sites that reflect the history and traditions of the region.<br/>
+                    Visitors can explore ancient castles, lush valleys, and picturesque gardens and join the adventure!</p>
+                <div class="search-box">
+                    <input type="text" placeholder="Find attractions, guides,..." />
+                    <button>Search</button>
+                </div>
+                <div class="button">
+                    <button><a href="http://127.0.0.1:5500/page%20seven.html">see the slides!</a></button>
+                </div>
+                <button id="theme-toggle">Toggle Theme</button>
+
+                </div>
+            </main>
+            <script>
+
+            const themeToggleButton = document.getElementById('theme-toggle');
+            const body = document.body;
+            
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark-mode');
+            }
+            
+            themeToggleButton.addEventListener('click', () => {
+                body.classList.toggle('dark-mode');
+                
+                // Store the theme preference in localStorage
+                if (body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.removeItem('theme');
+                }
+            });
+            </script>
+
+            <footer>
+                <p>&copy; 2025 Khorramabad Tourism. All Rights Reserved.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

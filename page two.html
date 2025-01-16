@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #a79c9a;
+        }
+
+        .error {
+
+            color: rgb(182, 40, 40);
+            text-align: center;
+
+        }
+
+        .error_input{
+            border: 1px solid red;
+        }
+
+
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: rgba(100, 97, 91, 0.7); 
+        }
+
+        header h1 {
+            font-size: 50px; 
+            font-weight: 700;
+            color: #d4a06d; 
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            margin: 0;
+            margin-right: 30px;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links ul li {
+            margin-left: 15px;
+        }
+
+        .nav-links ul li:last-child {
+            margin-right: 20px; 
+        }
+
+        .nav-links ul li a {
+            text-decoration: none;
+            color: #f1f1f1;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links ul li a:hover {
+            color: #bd9f82;
+        }
+
+        .forms-container {
+            display: flex;
+            justify-content: center;
+            margin: 2rem;
+        }
+        form {
+            background-color: #baa6a0;
+            margin: 45px;
+            padding: 50px;
+            border: 3px solid #483b59;
+            border-radius: 3px;
+            box-shadow: 0 2px 5px rgba(41, 39, 39, 0.1);
+            width: 450px;
+        }
+        form h3 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        form input {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form button {
+            width: 475px;
+            padding: 10px;
+            background-color: #86639b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #440967;
+        }
+        footer {
+         background-color: rgba(81, 78, 70, 0.7);
+         color: white;
+         text-align: center;
+         padding: 1px 0;
+         font-size: 14px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="page one.html">Attractions</a></li>
+                        <li><a href="page three.html">Travel Guides</a></li>
+                        <li><a href="page two.html">Contact Us</a></li>
+                    </ul>
+                </div>
+        </header>
+    </header>
+    <div class="forms-container">
+        
+        
+        <form id="form" action="http://127.0.0.1:5500/page%20three.html" onsubmit="return check_validation()">
+            <h3>Sign Up</h3>
+            <label for="name">First name - Last name:</label>
+            <input type="text" id="name" placeholder="Enter your full name">
+            <label for="phone">Mobile Phone:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        
+        <script type="text/javascript">
+            function check_validation() {
+                const email = document.getElementById("email").value;
+                const pass = document.getElementById("password").value;
+                const repass = document.getElementById("confirm-password").value;
+                const name = document.getElementById("name").value;
+                const phone = document.getElementById("phone").value;
+                let errorMessage = '';
+        
+                
+                if (name === '') {
+                    errorMessage += "Name is required.\n";
+                }
+        
+                
+                const phoneRegex = /^09[0-9]{9}$/;  // Validates phone numbers starting with 09 and having 11 digits
+                if (!phoneRegex.test(phone)) {
+                    errorMessage += "Phone number must be 11 digits long, starting with 09.\n";
+                }
+        
+                
+                if (pass.length < 6) {
+                    errorMessage += 'Password is too short. It must be at least 6 characters long.\n';
+                }
+        
+                
+                if (pass !== repass) {
+                    errorMessage += 'Passwords do not match.\n';
+                }
+        
+                
+                if (errorMessage !== '') {
+                    alert(errorMessage);
+                    return false;  
+                }
+        
+                
+                alert("Form submitted successfully!");
+                return true;  
+            }
+        </script>
+    </div>   
+    <footer>
+        <p>&copy; 2025 Khorramabad Tourism. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

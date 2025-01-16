@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide one</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #a79c9a;
+        }
+        header {
+            background-color: rgba(100, 97, 91, 0.7);
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px; 
+            padding: 0 100px; 
+        }
+
+        header h1 {
+            font-size: 55px; 
+            font-weight: 700;
+            color: #d4a06d; 
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            margin: 0;
+            margin-right: 30px; 
+        }
+
+        nav {
+            font-size: 17px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px; 
+            font-weight: 250px;
+        }
+
+        nav a:hover {
+            color: #bd9f82;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .profile {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 2px solid #7c398c;
+            margin-right: 20px;
+        }
+
+        .profile-description {
+            max-width: 600px;
+            text-align: left;
+            background-color: #a188af;
+            padding: 55px;
+            border-radius: 8px;
+        }
+
+        .profile-description h2 {
+            margin: 0;
+            font-size: 25px;
+            color: #020202;
+        }
+
+        .profile-description p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #2b0c0c;
+        }
+
+        .reservation-info {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .schedule {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #444;
+        }
+
+        .schedule ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .schedule li {
+            margin: 15px 0;
+            color: #3b0a0a;
+        }
+        .schedule ul h3{
+            color: #020202;
+            font-size:25px;
+        }
+
+        .form-container {
+            margin-top: 30px;
+            text-align: left;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #b18174;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .form-container input {
+            width: 97%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-container button {
+            background-color: #86639b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #440967;
+        }
+
+        footer {
+            background-color: rgba(81, 78, 70, 0.7);
+            color: white;
+            text-align: center;
+            padding: 1px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Guide number One</h1>
+        <nav>
+            <a href="page three.html">Travel Guides</a>
+            <a href="page two.html">Contact Us</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="profile">
+            <img src="pic 13.jpg" alt="Travel Guide">
+            <div class="profile-description">
+                <h2>Niloofar Hosseinzadeh - Your Travel Guide</h2>
+                <p>Niloofar, a 22-year-old from Khorramabad, is passionate about traveling and adventure.
+                    With 5 years of experience as a tour guide for various tours visiting Khorramabad from all over the country, she's ready to make your trip unforgettable.
+                    If you're looking for an adventurous journey with Niloofar,book her as soon as possible!</p>
+            </div>
+        </div>
+
+        <div class="reservation-info">
+            <p>If you wish to book this guide, please consider the following schedule:</p>
+        </div>
+
+        <div class="schedule">
+            <ul>
+                <h3>ON JANUARY 2025 :</h3>
+                <li>Saturday to Tuesday: 9 AM - 6 PM</li>
+                <li>Wednesday: 11 AM - 3 PM</li>
+                <li>Thursday and Friday: Off </li>
+            </ul>
+        </div>
+
+        <div class="form-container">
+            <form action="Contact us.html" method="get">
+                <label for="date">Select Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Select Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="day">Enter Day:</label>
+                <input type="text" id="day" name="day" placeholder="e.g., Monday" required>
+
+                <button type="submit">Confirm</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Khorramabad Tourism. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
